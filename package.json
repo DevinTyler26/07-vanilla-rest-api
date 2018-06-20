@@ -4,8 +4,7 @@
   "description": "![cf](https://i.imgur.com/7v5ASc8.png) Lab 07: Vanilla HTTP Server ======",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && jest --coverage",
-    "test-nolint": "jest --coverage",
+    "test": "jest --coverage",
     "watchAll": "jest --coverage --watchAll",
     "start": "nodemon main.js",
     "eslint": "eslint ."
