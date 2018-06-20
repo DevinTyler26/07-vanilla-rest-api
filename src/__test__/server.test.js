@@ -26,7 +26,7 @@ describe('GET /cowsayPage', () => {
   const mockCow = cowsay.say({ text: 'Hey Devin' });
   const mockHTML = `<section><h3><a href="api/time">Click here for current time</a></h3><pre>${mockCow}</pre></section>`;
   test('should respond with status 200 and return cow HTML', () => {
-    return superagent.get(`${apiUrl}/cowsayPage`)
+    return superagent.get(`${apiUrl}/cowsay`)
       .query({ text: 'Hey Devin' })
       .then((res) => {
         expect(res.status).toEqual(200);
@@ -52,7 +52,7 @@ describe('POST /echo', () => {
 describe('INVALID req to API', () => {
   describe('GET /cowsPage', () => {
     test('should err with 400 status', () => {
-      return superagent.get(`${apiUrl}/cowsayPage`)
+      return superagent.get(`${apiUrl}/cowsay`)
         .query({})
         .catch((err) => {
           expect(err.status).toEqual(400);
